@@ -1,0 +1,393 @@
+
+<!-- saved from url=(0695)https://katacoda.com/embed/openshift/training/rbc-u-day-test/dashboard/?v=2&embed=true&ui=inline&host=learn.openshift.com&url=https%3A%2F%2Flearn.openshift.com%2Ftraining%2Frbc-u-day-test&target=katacoda-terminal&nonce=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWJlZCI6dHJ1ZSwiZG9tYWluIjoiaHR0cHM6Ly9sZWFybi5vcGVuc2hpZnQuY29tL3RyYWluaW5nL3JiYy11LWRheS10ZXN0IiwiaXAiOiIyNjA3OmZlYTg6ZWUxOjE5MjA6ZDgyZjpkODEyOmVkYTY6ZmY1MCIsImlhdCI6MTYwMDI5MjI2NSwiZXhwIjoxNjAwMjkyMjk1fQ.ORCwLhzWofdhHWpks3wfu29ReKTfE97rLTxIkCVpw8g&color=%23373534&secondary=%23e00&background=%23fff&hideprogress=true&font=Open%20Sans&fontheader=Open%20Sans&externalcss=https%3A%2F%2Flearn.openshift.com%2Fstatic%2Fexternal.css&code= -->
+<html class="wf-sourcecodepro-n4-active wf-roboto-n4-active wf-robotoslab-n4-active wf-opensans-n4-active wf-active"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <link rel="preload" as="style" href="./materialize-embed.css">
+    <link rel="preload" as="style" href="./style2.css">
+    <link rel="preload" as="style" href="./vendor.css">
+    <link rel="preload" as="style" href="./tutorial-style.css">
+    <link rel="preload" as="style" href="./course-style.css">
+    <link rel="preload" as="style" href="./embed.css">
+    <meta name="lastUpdated" content="">
+    <meta name="gitCommit" content="">
+
+    <link type="text/css" rel="stylesheet" href="./vendor.css" media="screen,projection">
+    <link type="text/css" rel="stylesheet" href="./materialize-embed.css" media="screen,projection">
+    <link type="text/css" rel="stylesheet" href="./fontawesome.min.css" media="screen,projection">
+    <link rel="stylesheet" href="./style.min.css">
+    <link type="text/css" rel="stylesheet" href="./style2.css" media="screen,projection">
+    <link type="text/css" rel="stylesheet" href="./tutorial-style.css" media="screen,projection">
+    <link type="text/css" rel="stylesheet" href="./course-style.css" media="screen,projection">
+    <link type="text/css" rel="stylesheet" href="./embed.css" media="screen,projection">
+    <style media="screen">
+        body {
+          font-family: Open Sans;
+        }
+
+        h1, h2, h3, h4 {
+          font-family: Open Sans;
+        }
+
+        #intro .banner, #finished .banner,
+        #course-title {
+          background: #373534;
+        }
+
+        #step-progress #step-progress-text,
+        #intro #course-details .value {
+          color: #373534;
+        }
+
+        blockquote {
+          border-left: 5px solid #373534;
+        }
+
+        button.primary-btn.btn,
+        .primary-btn.btn {
+          background: #e00;
+        }
+
+      .step > h1,
+      .step > h2,
+      .step > h3,
+      .step > h4,
+      .step .content h1,
+      .step .content h2,
+      .step .content h3,
+      .step .content h4 {
+        color: #373534;
+      }
+
+      .material-tooltip {
+        background: black;
+      }
+    </style>
+    <link type="text/css" rel="stylesheet" href="./external.css" media="screen,projection">
+    <title>OpenShift Workshop using Interactive Browser-Based Labs | Katacoda</title>
+    <!-- start Mixpanel --><script async="" src="./analytics.js"></script><script type="text/javascript" async="" src="./mixpanel-2.2.min.js"></script><script type="text/javascript">(function(f,b){if(!b.__SV){var a,e,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");
+for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElement("script");a.type="text/javascript";a.async=!0;a.src="//cdn.mxpnl.com/libs/mixpanel-2.2.min.js";e=f.getElementsByTagName("script")[0];e.parentNode.insertBefore(a,e)}})(document,window.mixpanel||[]);
+mixpanel.init("5574553b9aa0851a3c9fa0fc4cd101df");</script><!-- end Mixpanel -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-56533756-2', 'katacoda.com');
+      ga('send', 'pageview');
+    </script>
+    <script type="text/javascript" src="./jquery-2.1.1.min.js"></script><link rel="stylesheet" href="./css" media="all">
+  </head>
+
+  <body class="row vsc-initialized">
+
+    <style media="screen">
+  body {
+    overflow: hidden;
+  }
+
+    body {
+      font-weight: initial;
+      font-family: Open Sans;
+    }
+
+    h1, h2, h3, h4 {
+      font-weight: initial;
+      font-family: Open Sans;
+    }
+
+    #course-pathway {
+      background: #fff;
+    }
+
+    #user-course-progress,
+    #course-pathway .x .panel {
+      background: #373534;
+    }
+
+    #user-course-progress .metric,
+    .x h2,
+    #user-course-progress .metric-header {
+      color: white;
+    }
+
+
+    #user-course-progress .action.start, .x .panel .action.start,
+    #course-pathway .x .panel .action.start {
+      background: #e00;
+      border-color: #e00;
+    }
+
+    #course-pathway .panel .fa.fa-check,
+    .progress {
+      display: none;
+    }
+
+
+  #course-pathway .panel {
+    height: 220px;
+  }
+
+  #course-pathway.weave.color-bar-layout .panels {
+    padding: 0;
+  }
+
+  #course-pathway .panel .content {
+    height: 100px;
+  }
+
+  #course-pathway .panel h4 {
+    margin-top: 0;
+  }
+
+  .x .col.s12 .col.s3.panel, .x .panel {
+    width: 30%;
+  }
+  #course-pathway .panel {
+    height: 250px;
+  }
+
+  #course-pathway .panel .content {
+    height: 126px;
+  }
+  #user-course-progress .action.start, .x .panel .action.start, #course-pathway .x .panel .action.start {
+    background: #168F9D;
+    border-color: #168F9D;
+  }
+</style>
+<link type="text/css" rel="stylesheet" href="./external.css" media="screen,projection">
+<section id="course-pathway" class="openshift color-bar-layout">
+
+  <section class="x row">
+    <div class="panels col s12 center">
+        <div class="panel rbc-u-day-test  col s3">
+          <div>
+            <h4>Logging in to an OpenShift Cluster</h4>
+            <p>
+              
+            </p>
+          </div>
+          
+            <a class="action start" href="https://learn.openshift.com/introduction/cluster-access/" title="" target="_blank">Start Scenario</a>
+
+        </div>
+        <div class="panel rbc-u-day-test  col s3">
+          <div>
+            <h4>Transferring Files in and out of Containers</h4>
+            <p>
+              
+            </p>
+          </div>
+          
+            <a class="action start" href="https://learn.openshift.com/training/rbc-u-day-test/transferring-files" title="" target="_parent">Start Scenario</a>
+
+        </div>
+        <div class="panel rbc-u-day-test  col s3">
+          <div>
+            <h4>Getting Started with OpenShift for Developers</h4>
+            <p>
+              
+            </p>
+          </div>
+          
+            <a class="action start" href="https://learn.openshift.com/training/rbc-u-day-test/getting-started" title="" target="_parent">Start Scenario</a>
+
+        </div>
+        <div class="panel rbc-u-day-test  col s3">
+          <div>
+            <h4>Deploying Applications From Images</h4>
+            <p>
+              
+            </p>
+          </div>
+          
+            <a class="action start" href="https://learn.openshift.com/training/rbc-u-day-test/deploying-images" title="" target="_parent">Start Scenario</a>
+
+        </div>
+        <div class="panel rbc-u-day-test  col s3">
+          <div>
+            <h4>Deploying Applications From Source</h4>
+            <p>
+              
+            </p>
+          </div>
+          
+            <a class="action start" href="https://learn.openshift.com/training/rbc-u-day-test/deploying-python" title="" target="_parent">Start Scenario</a>
+
+        </div>
+        <div class="panel rbc-u-day-test  col s3">
+          <div>
+            <h4>Getting Started with Helm 3 on OpenShift</h4>
+            <p>
+              
+            </p>
+          </div>
+          
+            <a class="action start" href="https://learn.openshift.com/training/rbc-u-day-test/helm" title="" target="_parent">Start Scenario</a>
+
+        </div>
+        <div class="panel rbc-u-day-test  col s3">
+          <div>
+            <h4>Using the CLI to Manage Resource Objects</h4>
+            <p>
+              
+            </p>
+          </div>
+          
+            <a class="action start" href="https://learn.openshift.com/training/rbc-u-day-test/resource-objects" title="" target="_parent">Start Scenario</a>
+
+        </div>
+        <div class="panel rbc-u-day-test  col s3">
+          <div>
+            <h4>Developing with odo</h4>
+            <p>
+              
+            </p>
+          </div>
+          
+            <a class="action start" href="https://learn.openshift.com/training/rbc-u-day-test/developing-with-odo" title="" target="_parent">Start Scenario</a>
+
+        </div>
+        <div class="panel rbc-u-day-test  col s3">
+          <div>
+            <h4>Connecting to a Database Using Port Forwarding</h4>
+            <p>
+              
+            </p>
+          </div>
+          
+            <a class="action start" href="https://learn.openshift.com/training/rbc-u-day-test/port-forwarding" title="" target="_parent">Start Scenario</a>
+
+        </div>
+        <div class="panel rbc-u-day-test  col s3">
+          <div>
+            <h4>Quarkus workshop: Getting Started with Quarkus</h4>
+            <p>
+              Supersonic, Subatomic Java with Quarkus
+            </p>
+          </div>
+          
+            <a class="action start" href="https://learn.openshift.com/training/rbc-u-day-test/getting-started" title="" target="_parent">Start Scenario</a>
+
+        </div>
+        <div class="panel rbc-u-day-test  col s3">
+          <div>
+            <h4>Introduction to GitOps with OpenShift</h4>
+            <p>
+              
+            </p>
+          </div>
+          
+            <a class="action start" href="https://learn.openshift.com/training/rbc-u-day-test/gitops-introduction" title="" target="_parent">Start Scenario</a>
+
+        </div>
+        <div class="panel rbc-u-day-test  col s3">
+          <div>
+            <h4>Making Persistent Storage Calls in Your Application</h4>
+            <p>
+              
+            </p>
+          </div>
+          
+            <a class="action start" href="https://learn.openshift.com/training/rbc-u-day-test/persistent-intro" title="" target="_parent">Start Scenario</a>
+
+        </div>
+        <div class="panel rbc-u-day-test  col s3">
+          <div>
+            <h4>Deploying a Jupyter Notebook Image</h4>
+            <p>
+              
+            </p>
+          </div>
+          
+            <a class="action start" href="https://learn.openshift.com/training/rbc-u-day-test/jupyter-notebooks" title="" target="_parent">Start Scenario</a>
+
+        </div>
+        <div class="panel rbc-u-day-test  col s3">
+          <div>
+            <h4>Getting Started with OpenShift Serverless</h4>
+            <p>
+              
+            </p>
+          </div>
+          
+            <a class="action start" href="https://learn.openshift.com/training/rbc-u-day-test/serverless" title="" target="_parent">Start Scenario</a>
+
+        </div>
+    </div>
+  </section>
+</section>
+
+
+
+    <div id="debug-model" class="modal">
+      <div class="modal-content">
+        <h4>Debug Information</h4>
+        <p id="debug-info"></p>
+      </div>
+      <div class="modal-footer">
+        <a href="https://katacoda.com/embed/openshift/training/rbc-u-day-test/dashboard/?v=2&amp;embed=true&amp;ui=inline&amp;host=learn.openshift.com&amp;url=https%3A%2F%2Flearn.openshift.com%2Ftraining%2Frbc-u-day-test&amp;target=katacoda-terminal&amp;nonce=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWJlZCI6dHJ1ZSwiZG9tYWluIjoiaHR0cHM6Ly9sZWFybi5vcGVuc2hpZnQuY29tL3RyYWluaW5nL3JiYy11LWRheS10ZXN0IiwiaXAiOiIyNjA3OmZlYTg6ZWUxOjE5MjA6ZDgyZjpkODEyOmVkYTY6ZmY1MCIsImlhdCI6MTYwMDI5MjI2NSwiZXhwIjoxNjAwMjkyMjk1fQ.ORCwLhzWofdhHWpks3wfu29ReKTfE97rLTxIkCVpw8g&amp;color=%23373534&amp;secondary=%23e00&amp;background=%23fff&amp;hideprogress=true&amp;font=Open%20Sans&amp;fontheader=Open%20Sans&amp;externalcss=https%3A%2F%2Flearn.openshift.com%2Fstatic%2Fexternal.css&amp;code=#!" class="modal-action modal-close waves-effect waves-green btn-flat">OK</a>
+      </div>
+    </div>
+
+    <script type="text/javascript">window._trackJs = { token: '97f1dd886918463ebc84d187024d5aad', application: 'katacoda-embedded' };</script>
+    <script type="text/javascript" src="./tracker.js"></script>
+    <script type="text/javascript" src="./materialize.min.js"></script>
+    <script type="text/javascript" src="./handlebars.runtime-v4.0.5.js"></script>
+    <script type="text/javascript" src="./templates.js"></script>
+    <script type="text/javascript" src="./application.js"></script>
+    <script type="text/javascript" src="./webfont.js"></script>
+    <script type="text/javascript">
+      WebFont.load({
+        google: {
+          families: ['Source Code Pro', 'Roboto', 'Roboto Slab', 'Open Sans', 'Open Sans']
+        }
+      });
+    </script>
+
+
+    <script type="text/javascript">
+      // The page was accessed by navigating into the history.
+      var TYPE_BACK_FORWARD = 2;
+      if(performance && performance.navigation.type == TYPE_BACK_FORWARD){
+        location.reload(true);
+      }
+
+        window.grecaptchaToken = 'skip';
+
+      var app;
+      $(document).ready(function() { 
+        if(performance && performance.navigation.type == TYPE_BACK_FORWARD){
+          location.reload(true);
+          return;
+        }
+
+        if (window.trackJs) {
+          trackJs.addMetadata("region", 'us');
+          trackJs.addMetadata("host", 'web');
+          trackJs.addMetadata("deployment", 'katacoda');
+        }
+        window.originalPathwayId = '';
+
+        window.environment = '';
+        window.host = '';
+        window.embedded = true;
+        app = new App();
+        app.init();
+      });
+
+      window._csrf = '';
+      window.nonce = '';
+      window.session = '';
+      window.on_application_load = function(app) {
+        window.region = 'us';
+          app.user = {};
+      }
+
+    </script>
+
+  
+
+</body></html>
